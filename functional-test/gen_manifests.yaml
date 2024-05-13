@@ -5,8 +5,6 @@ kind: Service
 metadata:
   name: hello-world-functional-service
       
-  namespace: stage
-      
 spec:
   selector:
     app: hello-world-functional
@@ -22,8 +20,6 @@ metadata:
   name: hello-world-functional-deployment
   annotations:
     version: 0.0.1-1
-      
-  namespace: stage
       
 spec:
   strategy: 
