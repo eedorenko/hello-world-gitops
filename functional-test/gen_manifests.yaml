@@ -19,7 +19,7 @@ kind: Deployment
 metadata:
   name: hello-world-functional-deployment
   annotations:
-    version: 0.0.1-4
+    version: 0.0.1-8
       
 spec:
   strategy: 
@@ -33,11 +33,11 @@ spec:
       labels:
         app: hello-world-functional      
       annotations:
-        version: 0.0.1-4
+        version: 0.0.1-8
     spec:
       containers:
       - name: hello-world-functional
-        image: ghcr.io/eedorenko/hello-world/hello-world:0.0.1-4
+        image: ghcr.io/eedorenko/hello-world/hello-world:0.0.1-8
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
