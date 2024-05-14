@@ -19,7 +19,7 @@ kind: Deployment
 metadata:
   name: hello-world-functional-eu-deployment
   annotations:
-    version: 0.0.1-6
+    version: 0.0.1-7
       
 spec:
   strategy: 
@@ -33,11 +33,11 @@ spec:
       labels:
         app: hello-world-functional-eu      
       annotations:
-        version: 0.0.1-6
+        version: 0.0.1-7
     spec:
       containers:
       - name: hello-world-functional-eu
-        image: ghcr.io/eedorenko/hello-world/hello-world:0.0.1-6
+        image: ghcr.io/eedorenko/hello-world/hello-world:0.0.1-7
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
