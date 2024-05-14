@@ -5,8 +5,6 @@ kind: Service
 metadata:
   name: hello-world-functional-service
       
-  namespace: dev
-      
 spec:
   selector:
     app: hello-world-functional
@@ -21,9 +19,7 @@ kind: Deployment
 metadata:
   name: hello-world-functional-deployment
   annotations:
-    version: 0.0.1-1
-      
-  namespace: dev
+    version: 0.0.1-4
       
 spec:
   strategy: 
@@ -37,11 +33,11 @@ spec:
       labels:
         app: hello-world-functional      
       annotations:
-        version: 0.0.1-1
+        version: 0.0.1-4
     spec:
       containers:
       - name: hello-world-functional
-        image: ghcr.io/eedorenko/hello-world/hello-world:0.0.1-1
+        image: ghcr.io/eedorenko/hello-world/hello-world:0.0.1-4
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
