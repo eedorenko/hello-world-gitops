@@ -19,12 +19,12 @@ kind: Deployment
 metadata:
   name: hello-world-functional-deployment
   annotations:
-    version: 0.0.1-14
+    version: 0.0.1-16
       
 spec:
   strategy: 
     type: Recreate      
-  replicas: 5
+  replicas: 3
   selector:
     matchLabels:
       app: hello-world-functional
@@ -33,11 +33,11 @@ spec:
       labels:
         app: hello-world-functional      
       annotations:
-        version: 0.0.1-14
+        version: 0.0.1-16
     spec:
       containers:
       - name: hello-world-functional
-        image: ghcr.io/eedorenko/hello-world/hello-world:0.0.1-14
+        image: ghcr.io/eedorenko/hello-world/hello-world:0.0.1-16
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
