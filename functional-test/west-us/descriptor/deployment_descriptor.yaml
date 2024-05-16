@@ -1,0 +1,25 @@
+apiVersion: hub.kalypso.io/v1alpha1
+kind: DeploymentDescriptor
+metadata:
+  name: hello-world-west-us
+spec:
+  workload:
+    name: hello-world
+    source:
+        repo: https://github.com/eedorenko/hello-world
+        branch: main
+        path: .
+    application:
+        name: hello-world
+        workspace:
+            name: kaizen-team
+  deploymentTarget:
+    name: west-us
+    environment: dev-gray
+    manifests:
+        repo: https://github.com/eedorenko/hello-world-gitops
+        branch: dev-gray
+        path: ./functional-test/west-us
+  workloadVersion:
+    version: 0.0.1-24
+    commit: f79380d4aa29860a68ea1f009c47c158b237e1ea    
