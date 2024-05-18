@@ -4,7 +4,7 @@ metadata:
   name: hello-world-functional-test
 spec:
   workload:
-    name: hello-world
+    name: hw
     source:
         repo: https://github.com/eedorenko/hello-world
         branch: main
@@ -21,5 +21,5 @@ spec:
         branch: dev-green
         path: ./functional-test
   workloadVersion:
-    version: 0.0.1-25
-    commit: d5276097c4c27332a22227ada5b99c46aaba814c    
+    version: 0.0.1-31
+    commit: 7d783a24f90ef47060d52c91ba8e5567f16898b7    
