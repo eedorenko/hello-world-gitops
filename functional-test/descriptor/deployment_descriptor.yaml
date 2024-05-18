@@ -1,7 +1,7 @@
 apiVersion: hub.kalypso.io/v1alpha1
 kind: DeploymentDescriptor
 metadata:
-  name: hello-world-functional-test
+  name: hello-world-functional-test-dev-green
 spec:
   workload:
     name: hw
@@ -21,5 +21,5 @@ spec:
         branch: dev-green
         path: ./functional-test
   workloadVersion:
-    version: 0.0.1-31
-    commit: 7d783a24f90ef47060d52c91ba8e5567f16898b7    
+    version: 0.0.1-33
+    commit: ed323e8f3284d641cf67b9a1b53cd1b2e0e10108    
