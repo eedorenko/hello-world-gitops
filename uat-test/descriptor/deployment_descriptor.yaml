@@ -1,0 +1,25 @@
+apiVersion: hub.kalypso.io/v1alpha1
+kind: DeploymentDescriptor
+metadata:
+  name: hello-world-uat-test-stage-red
+spec:
+  workload:
+    name: hw
+    source:
+        repo: https://github.com/eedorenko/hello-world
+        branch: main
+        path: .
+    application:
+        name: hello-world
+        workspace:
+            name: kaizen-team
+  deploymentTarget:
+    name: uat-test
+    environment: stage-red
+    manifests:
+        repo: https://github.com/eedorenko/hello-world-gitops
+        branch: stage-red
+        path: ./uat-test
+  workloadVersion:
+    version: 0.0.1-33
+    commit: ed323e8f3284d641cf67b9a1b53cd1b2e0e10108    
