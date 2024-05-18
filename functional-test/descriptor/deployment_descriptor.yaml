@@ -21,5 +21,5 @@ spec:
         branch: dev-red
         path: ./functional-test
   workloadVersion:
-    version: 0.0.1-33
-    commit: ed323e8f3284d641cf67b9a1b53cd1b2e0e10108    
+    version: 0.0.1-34
+    commit: 550ec125ca8fd7176d50afd2a1ae5a5f2e89e9ce    
