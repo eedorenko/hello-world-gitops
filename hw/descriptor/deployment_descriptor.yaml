@@ -1,0 +1,25 @@
+apiVersion: hub.kalypso.io/v1alpha1
+kind: DeploymentDescriptor
+metadata:
+  name: hw-stage-red
+spec:
+  workload:
+    name: hw
+    source:
+        repo: https://github.com/eedorenko/hello-world
+        branch: main
+        path: .
+    application:
+        name: hello-world
+        workspace:
+            name: kaizen-team
+  deploymentTarget:
+    name: hw-stage-red
+    environment: stage-red
+    manifests:
+        repo: https://github.com/eedorenko/hello-world-gitops
+        branch: stage-red
+        path: ./hw
+  workloadVersion:
+    version: 0.0.1-42
+    commit: a5e4e7a865ba170ac099b0cb76fbaca8db380c06    
