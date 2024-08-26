@@ -1,7 +1,7 @@
 apiVersion: hub.kalypso.io/v1alpha1
 kind: DeploymentDescriptor
 metadata:
-  name: hello-world-functional-test-dev-gray
+  name: functional-test-dev-gray
 spec:
   workload:
     name: hw
@@ -14,12 +14,12 @@ spec:
         workspace:
             name: kaizen-team
   deploymentTarget:
-    name: functional-test
+    name: functional-test-dev-gray
     environment: dev-gray
     manifests:
         repo: https://github.com/eedorenko/hello-world-gitops
         branch: dev-gray
         path: ./functional-test
   workloadVersion:
-    version: 0.0.1-38
-    commit: b0910f9edc70f052ae513e52dded3b4893d44b43    
+    version: 0.0.1-41
+    commit: 1030d8a6f36042d368e6290a8cd3b12a77f79115    
