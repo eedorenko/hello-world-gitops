@@ -21,5 +21,5 @@ spec:
         branch: dev-gray
         path: ./functional-test
   workloadVersion:
-    version: 0.0.1-38
-    commit: b0910f9edc70f052ae513e52dded3b4893d44b43    
+    version: 0.0.1-40
+    commit: a2638481e04aa189ceacc940f1b92a391d190649    
