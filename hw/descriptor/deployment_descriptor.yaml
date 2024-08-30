@@ -21,5 +21,5 @@ spec:
         branch: dev-gray
         path: ./hw
   workloadVersion:
-    version: 0.0.1-44
-    commit: 9d9ad4d49581ad31b1c885ad4801a2e1fa23dece    
+    version: 0.0.1-45
+    commit: 094b34031c49dfebd6670f2d2dd6509776cf5ff7    
