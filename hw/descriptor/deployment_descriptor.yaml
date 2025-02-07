@@ -21,5 +21,5 @@ spec:
         branch: dev-green
         path: ./hw
   workloadVersion:
-    version: 0.0.1-44
-    commit: 9d9ad4d49581ad31b1c885ad4801a2e1fa23dece    
+    version: 0.0.1-52
+    commit: 8667507a39854887d25fec9af252b3cf89238c26    
