@@ -22,4 +22,4 @@ spec:
         path: ./hw
   workloadVersion:
     version: 0.0.1-53
-    commit: 40fedad02e3e81afac02f6e8da5c4966074cb05a    
+    commit: 40fedad02e3e81afac02f6e8da5c4966074cb051    
