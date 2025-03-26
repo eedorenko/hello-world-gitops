@@ -19,7 +19,7 @@ kind: Deployment
 metadata:
   name: hello-world-performance-deployment
   annotations:
-    version: 0.0.1-57
+    version: 0.0.1-60
       
 spec:
   strategy: 
@@ -33,11 +33,11 @@ spec:
       labels:
         app: hello-world-performance      
       annotations:
-        version: 0.0.1-57
+        version: 0.0.1-60
     spec:
       containers:
       - name: hello-world-performance
-        image: ghcr.io/eedorenko/hello-world/hello-world:0.0.1-57
+        image: ghcr.io/eedorenko/hello-world/hello-world:0.0.1-60
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
