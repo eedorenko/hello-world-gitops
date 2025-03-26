@@ -1,0 +1,25 @@
+apiVersion: hub.kalypso.io/v1alpha1
+kind: DeploymentDescriptor
+metadata:
+  name: performance-stage
+spec:
+  workload:
+    name: hw
+    source:
+        repo: https://github.com/eedorenko/hello-world
+        branch: main
+        path: .
+    application:
+        name: hello-world
+        workspace:
+            name: kaizen-team
+  deploymentTarget:
+    name: performance-stage
+    environment: stage
+    manifests:
+        repo: https://github.com/eedorenko/hello-world-gitops
+        branch: stage
+        path: ./performance
+  workloadVersion:
+    version: 0.0.1-55
+    commit: 4a95c491b86d26ab9b264b4bdc86524f92f78e04    
