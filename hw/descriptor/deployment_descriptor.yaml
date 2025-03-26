@@ -21,5 +21,5 @@ spec:
         branch: prod-gray
         path: ./hw
   workloadVersion:
-    version: 0.0.1-56
-    commit: 596d0ad52b0c852a41b317cefa38961ab8df5254    
+    version: 0.0.1-57
+    commit: 234c25131c6e9e9033d7d3dd9b80fd6472092ef6    
