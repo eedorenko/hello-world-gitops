@@ -1,0 +1,25 @@
+apiVersion: hub.kalypso.io/v1alpha1
+kind: DeploymentDescriptor
+metadata:
+  name: func-stage
+spec:
+  workload:
+    name: hw
+    source:
+        repo: https://github.com/eedorenko/hello-world
+        branch: main
+        path: .
+    application:
+        name: hello-world
+        workspace:
+            name: kaizen-team
+  deploymentTarget:
+    name: func-stage
+    environment: stage
+    manifests:
+        repo: https://github.com/eedorenko/hello-world-gitops
+        branch: stage
+        path: ./func
+  workloadVersion:
+    version: 0.0.1-57
+    commit: 234c25131c6e9e9033d7d3dd9b80fd6472092ef6    
