@@ -1,7 +1,7 @@
 apiVersion: hub.kalypso.io/v1alpha1
 kind: DeploymentDescriptor
 metadata:
-  name: hw-dev-gray
+  name: hw-dev
 spec:
   workload:
     name: hw
@@ -14,12 +14,12 @@ spec:
         workspace:
             name: kaizen-team
   deploymentTarget:
-    name: hw-dev-gray
-    environment: dev-gray
+    name: hw-dev
+    environment: dev
     manifests:
         repo: https://github.com/eedorenko/hello-world-gitops
-        branch: dev-gray
+        branch: dev
         path: ./hw
   workloadVersion:
-    version: 0.0.1-53
-    commit: 40fedad02e3e81afac02f6e8da5c4966074cb051    
+    version: 0.0.1-54
+    commit: 91861db60091c805ea17c1098d8935396909b0e0    
