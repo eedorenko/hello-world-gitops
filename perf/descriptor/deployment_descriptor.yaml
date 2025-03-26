@@ -21,5 +21,5 @@ spec:
         branch: stage
         path: ./perf
   workloadVersion:
-    version: 0.0.1-57
-    commit: 234c25131c6e9e9033d7d3dd9b80fd6472092ef6    
+    version: 0.0.1-59
+    commit: 78d2a369c00fd4cdc3678dc0e0a70230a70c4407    
