@@ -1,7 +1,7 @@
 apiVersion: hub.kalypso.io/v1alpha1
 kind: DeploymentDescriptor
 metadata:
-  name: perf-stage
+  name: func-stage
 spec:
   workload:
     name: hw
@@ -14,12 +14,12 @@ spec:
         workspace:
             name: kaizen-team
   deploymentTarget:
-    name: perf-stage
+    name: func-stage
     environment: stage
     manifests:
         repo: https://github.com/eedorenko/hello-world-gitops
         branch: stage
-        path: ./perf
+        path: ./func
   workloadVersion:
     version: 0.0.1-55
     commit: 4a95c491b86d26ab9b264b4bdc86524f92f78e04    

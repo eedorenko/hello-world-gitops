@@ -3,11 +3,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: hello-world-performance-service
+  name: hello-world-functional-service
       
 spec:
   selector:
-    app: hello-world-performance
+    app: hello-world-functional
   ports:
     - protocol: TCP
       port: 8080
@@ -17,26 +17,26 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-world-performance-deployment
+  name: hello-world-functional-deployment
   annotations:
     version: 0.0.1-55
       
 spec:
   strategy: 
     type: Recreate      
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
-      app: hello-world-performance
+      app: hello-world-functional
   template:
     metadata:
       labels:
-        app: hello-world-performance      
+        app: hello-world-functional      
       annotations:
         version: 0.0.1-55
     spec:
       containers:
-      - name: hello-world-performance
+      - name: hello-world-functional
         image: ghcr.io/eedorenko/hello-world/hello-world:0.0.1-55
         imagePullPolicy: Always
         ports:
