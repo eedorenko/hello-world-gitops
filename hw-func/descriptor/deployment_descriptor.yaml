@@ -21,5 +21,5 @@ spec:
         branch: stage
         path: ./hw-func
   workloadVersion:
-    version: 0.0.1-57
-    commit: 234c25131c6e9e9033d7d3dd9b80fd6472092ef6    
+    version: 0.0.1-60
+    commit: 6f347d04b216f5750b75e01bb015ea944e5b7998    
