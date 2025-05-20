@@ -21,5 +21,5 @@ spec:
         branch: dev
         path: ./hw
   workloadVersion:
-    version: 0.0.1-62
-    commit: 12bb06f88f4ad471c57a5dca1dac6a83231efc0d    
+    version: 0.0.1-63
+    commit: 528fa739e0101163962b55f0abaa22b68c56ff6a    
