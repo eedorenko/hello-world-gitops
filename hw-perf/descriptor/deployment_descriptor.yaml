@@ -21,5 +21,5 @@ spec:
         branch: stage
         path: ./hw-perf
   workloadVersion:
-    version: 0.0.1-60
-    commit: 6f347d04b216f5750b75e01bb015ea944e5b7998    
+    version: 0.0.1-64
+    commit: 58775ac67e6f5556ea363ddaa8aa1a774070c7ad    
