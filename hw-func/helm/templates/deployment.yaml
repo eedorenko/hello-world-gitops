@@ -1,53 +1,35 @@
----
-# Source: hello-world/templates/service.yaml
-apiVersion: v1
-kind: Service
-metadata:
-  name: hello-world-functional-service
-      
-  namespace: hello-world
-      
-spec:
-  selector:
-    app: hello-world-functional
-  ports:
-    - protocol: TCP
-      port: 8080
-      targetPort: 8080
----
-# Source: hello-world/templates/deployment.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-world-functional-deployment
+  name: {{  .Values.app.name}}-deployment
   annotations:
-    version: 0.0.1-67
-      
-  namespace: hello-world
-      
+    version: {{  .Values.version}}
+  {{ if .Values.namespace }}    
+  namespace: {{  .Values.namespace}}
+  {{ end }}    
 spec:
   strategy: 
     type: Recreate      
-  replicas: 1
+  replicas: {{  .Values.replicas}}
   selector:
     matchLabels:
-      app: hello-world-functional
+      app: {{  .Values.app.name}}
   template:
     metadata:
       labels:
-        app: hello-world-functional      
+        app: {{  .Values.app.name}}      
       annotations:
-        version: 0.0.1-67
+        version: {{  .Values.version}}
     spec:
       containers:
-      - name: hello-world-functional
-        image: ghcr.io/eedorenko/hello-world/hello-world:0.0.1-67
+      - name: {{  .Values.app.name}}
+        image: {{  .Values.image}}
         imagePullPolicy: Always
         ports:
-        - containerPort: 8080
+        - containerPort: {{  .Values.port}}
         env:
         - name: PORT
-          value: "8080"
+          value: {{  .Values.port | quote }}
         - name: CLUSTER_NAME
           valueFrom:
               configMapKeyRef:
@@ -67,4 +49,4 @@ spec:
           valueFrom:
               configMapKeyRef:
                 name: platform-config
-                key: DATABASE_URL
+                key: DATABASE_URL                
