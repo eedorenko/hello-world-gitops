@@ -2,5 +2,6 @@ app:
   name: hello-world
 replicas: 1
 port: 8080
-image: ghcr.io/eedorenko/hello-world/hello-world:0.0.1-66
-version: 0.0.1-66
+image: ghcr.io/eedorenko/hello-world/hello-world:0.0.1-67
+version: 0.0.1-67
+namespace: hello-world
