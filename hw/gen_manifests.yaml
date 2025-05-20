@@ -19,7 +19,7 @@ kind: Deployment
 metadata:
   name: hello-world-deployment
   annotations:
-    version: 0.0.1-65
+    version: 0.0.1-66
       
 spec:
   strategy: 
@@ -33,11 +33,11 @@ spec:
       labels:
         app: hello-world      
       annotations:
-        version: 0.0.1-65
+        version: 0.0.1-66
     spec:
       containers:
       - name: hello-world
-        image: ghcr.io/eedorenko/hello-world/hello-world:0.0.1-65
+        image: ghcr.io/eedorenko/hello-world/hello-world:0.0.1-66
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
