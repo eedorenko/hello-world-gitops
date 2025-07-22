@@ -40,6 +40,8 @@ spec:
         version: 0.0.1-67
     spec:
       serviceAccount: hw-sa
+      imagePullSecrets:
+      - name: acr-pull-secret
       containers:
       - name: hello-world
         image: helloworldkraftacr.azurecr.io/tacosburritos:v-0.0.1-60-ml-13
