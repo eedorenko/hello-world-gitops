@@ -41,7 +41,7 @@ spec:
     spec:
       containers:
       - name: hello-world
-        image: ghcr.io/eedorenko/hello-world/hello-world:0.0.1-67
+        image: helloworldkraftacr.azurecr.io/tacosburritos:v-0.0.1-60-ml-13
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
